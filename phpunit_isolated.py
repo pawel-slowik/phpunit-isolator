@@ -19,7 +19,7 @@ class Test(NamedTuple):
             return ""
         if re.fullmatch("#[0-9]+", self.data_set):
             return self.data_set
-        return " with data set " + self.data_set
+        return " with data set " + re.escape(self.data_set)
 
 
 class TestResult(NamedTuple):
